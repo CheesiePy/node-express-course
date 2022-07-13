@@ -2,11 +2,12 @@ const express = require('express')
 const app = express()
 
 const mockUserData = [
-    {name:"mikey", age:29},
-    {name:"Yugi", age:26},
+    {name:'mikey'},
+    {name:'Yugi'},
 ]
+
 app.get('/users', function(req, res){
-    res.jseon({
+    res.json({
         success: true,
         message: 'successfully got users',
         users: mockUserData
@@ -14,5 +15,5 @@ app.get('/users', function(req, res){
 })
 
 app.listen(8000, function () {
-    console.log("server is running on port 8000")
+    console.log('server is running on port 8000')
 })
