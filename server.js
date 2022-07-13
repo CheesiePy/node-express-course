@@ -7,7 +7,7 @@ app.use(bodyParser.json);
 
 const mockUserData = [
     {name:'mikey'},
-    {name:'Yugi'},
+    {name:'Yugi'}
 ]
 
 app.get('/users', function(req, res){
@@ -18,7 +18,7 @@ app.get('/users', function(req, res){
     })
 })
 //colons are used as veriables that be viewed in the params
-app.get('/users/:id',function(req, res){
+app.get('/users/:id', function(req, res){
     console.log(req.params.id)
     res.json({
         success: true,
@@ -27,7 +27,7 @@ app.get('/users/:id',function(req, res){
     })
 })
 
-app.post('/login',function(req,res){
+app.post('/login', function(req,res){
     // Typically passwoerds are encrypted using soomthing like bcrypt before sending to database
     const username = req.body.username;
     const password = req.body.password;
